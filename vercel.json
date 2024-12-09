@@ -1,24 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
-  ],
   "env": {
     "NEXT_PUBLIC_SOCKET_URL": "https://chitchat-socket-server.onrender.com",
     "NEXT_PUBLIC_APP_URL": "https://chitchat.vercel.app"
-  },
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "framework": "nextjs",
-  "cleanUrls": true,
-  "trailingSlash": false
+  }
 }
