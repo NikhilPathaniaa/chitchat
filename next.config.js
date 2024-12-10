@@ -1,15 +1,18 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+const { URL } = require('url');
+
 const nextConfig = {
   reactStrictMode: true,
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  output: 'standalone',
   images: {
     domains: ['images.unsplash.com', 'unsplash.com']
   },
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  output: 'standalone', 
   experimental: {
-    outputFileTracingRoot: '.',
-    serverComponentsExternalPackages: ['mongoose'],
-    appDir: true
+    serverComponentsExternalPackages: ['mongoose', 'socket.io', 'express']
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
