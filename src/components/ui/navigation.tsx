@@ -65,7 +65,7 @@ function ScrollProgress() {
       >
         <Box
           sx={{
-            height: '1080%',
+            height: '100%',
             backgroundColor: '#6366F1',
             width: `${progress}%`,
             transition: 'width 0.2s ease-in-out'
